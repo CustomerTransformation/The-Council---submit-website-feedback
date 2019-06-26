@@ -16,7 +16,7 @@
     "initial_stage_id": "AF-Stage-aec593c0-8057-464e-a986-726bed56393f",
     "serverSubmit": true,
     "prefix": "WB",
-    "isPublished": false
+    "isPublished": true
   },
   "stages": {
     "Stage 1": {
@@ -270,6 +270,40 @@
                   },
                   "conditionInputs": [],
                   "id": "AF-Field-7165cf1d-bf8d-448c-a37d-a0669f2c6e8f"
+                },
+                {
+                  "type": "textarea",
+                  "props": {
+                    "label": "Page title or address",
+                    "dataName": "pageTitle",
+                    "labelPosition": "alignLeft",
+                    "defaultValue": "",
+                    "helpText": "",
+                    "hidden": false,
+                    "readOnly": false,
+                    "summaryField": false,
+                    "displayName": true,
+                    "outerClass": null,
+                    "labelClass": null,
+                    "inputClass": null,
+                    "width": null,
+                    "lengthCount": null,
+                    "hideWhenBlank": null,
+                    "displayCondition": null,
+                    "mandatoryCondition": null,
+                    "readonlyCondition": null,
+                    "mandatory": true,
+                    "minimumLength": "",
+                    "maximumLength": "",
+                    "validationMask": "",
+                    "mandatoryMessage": "This information is required",
+                    "minimumLengthMessage": "Please input at least _min_value_ characters",
+                    "maximumLengthMessage": "Please input no more than _max_value_ characters",
+                    "validationMaskMessage": "Please input text of the format: _validation_mask_",
+                    "validationMaskMessageValue": "Select..."
+                  },
+                  "conditionInputs": [],
+                  "id": "AF-Field-88ffa9f0-42bc-4f6f-9360-64738aa7a4ec"
                 },
                 {
                   "type": "text",
