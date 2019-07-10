@@ -11,7 +11,7 @@
     "date_due_warn": "",
     "showCaseReference": false,
     "isSubform": false,
-    "notes": false,
+    "notes": "removed the questions about the customer wanting to be contacted",
     "initial_stage": "Stage 1",
     "initial_stage_id": "AF-Stage-aec593c0-8057-464e-a986-726bed56393f",
     "serverSubmit": true,
@@ -289,7 +289,7 @@
                     "width": null,
                     "lengthCount": null,
                     "hideWhenBlank": null,
-                    "displayCondition": null,
+                    "displayCondition": "{feedbackType} icontains 'A webpage' or {feedbackType} icontains 'The website in general'",
                     "mandatoryCondition": null,
                     "readonlyCondition": null,
                     "mandatory": true,
@@ -302,7 +302,57 @@
                     "validationMaskMessage": "Please input text of the format: _validation_mask_",
                     "validationMaskMessageValue": "Select..."
                   },
-                  "conditionInputs": [],
+                  "conditionInputs": [
+                    {
+                      "element": "select",
+                      "value": "feedbackType",
+                      "type": [
+                        "fields"
+                      ]
+                    },
+                    {
+                      "element": "select",
+                      "value": "icontains",
+                      "type": [
+                        "_select"
+                      ]
+                    },
+                    {
+                      "element": "select",
+                      "value": "A webpage",
+                      "type": [
+                        "list"
+                      ]
+                    },
+                    {
+                      "element": "select",
+                      "value": "or",
+                      "type": [
+                        "logicalOperators"
+                      ]
+                    },
+                    {
+                      "element": "select",
+                      "value": "feedbackType",
+                      "type": [
+                        "fields"
+                      ]
+                    },
+                    {
+                      "element": "select",
+                      "value": "icontains",
+                      "type": [
+                        "_select"
+                      ]
+                    },
+                    {
+                      "element": "select",
+                      "value": "The website in general",
+                      "type": [
+                        "list"
+                      ]
+                    }
+                  ],
                   "id": "AF-Field-88ffa9f0-42bc-4f6f-9360-64738aa7a4ec"
                 },
                 {
@@ -544,228 +594,6 @@
                     }
                   ],
                   "id": "AF-Field-aee63c03-efa4-4744-b547-389c81a52280"
-                },
-                {
-                  "type": "radio",
-                  "props": {
-                    "label": "Would you like to be contacted regarding your comments? ",
-                    "dataName": "contacted",
-                    "labelPosition": "alignLeft",
-                    "defaultType": "specific",
-                    "defaultValue": "",
-                    "defaultValueText": null,
-                    "listSource": "one-time-list",
-                    "helpText": "",
-                    "readOnly": false,
-                    "allowOther": false,
-                    "summaryField": false,
-                    "lookup": null,
-                    "lookupCondition": null,
-                    "lookupButton": null,
-                    "preventRunningOnInitialisation": null,
-                    "noResultsMessage": null,
-                    "tokenName": null,
-                    "listOfValues": [
-                      {
-                        "label": "Yes",
-                        "value": "yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "no"
-                      }
-                    ],
-                    "displayName": true,
-                    "outerClass": null,
-                    "labelClass": null,
-                    "inputClass": null,
-                    "width": null,
-                    "displayStyle": "horizontal",
-                    "styleAsButton": null,
-                    "hideWhenBlank": null,
-                    "hidden": null,
-                    "displayCondition": "{feedbackType} icontains 'A webpage' or {feedbackType} icontains 'The website in general'",
-                    "selectCondition": null,
-                    "mandatoryCondition": null,
-                    "readonlyCondition": null,
-                    "mandatory": true,
-                    "mandatoryMessage": "This field is required"
-                  },
-                  "conditionInputs": [
-                    {
-                      "element": "select",
-                      "value": "feedbackType",
-                      "type": [
-                        "fields"
-                      ]
-                    },
-                    {
-                      "element": "select",
-                      "value": "icontains",
-                      "type": [
-                        "_select"
-                      ]
-                    },
-                    {
-                      "element": "select",
-                      "value": "A webpage",
-                      "type": [
-                        "list"
-                      ]
-                    },
-                    {
-                      "element": "select",
-                      "value": "or",
-                      "type": [
-                        "logicalOperators"
-                      ]
-                    },
-                    {
-                      "element": "select",
-                      "value": "feedbackType",
-                      "type": [
-                        "fields"
-                      ]
-                    },
-                    {
-                      "element": "select",
-                      "value": "icontains",
-                      "type": [
-                        "_select"
-                      ]
-                    },
-                    {
-                      "element": "select",
-                      "value": "The website in general",
-                      "type": [
-                        "list"
-                      ]
-                    }
-                  ],
-                  "id": "AF-Field-5d2d1c75-b72e-49c7-9aeb-3d720d977e0b"
-                },
-                {
-                  "type": "text",
-                  "props": {
-                    "label": "Your name",
-                    "dataName": "yourName",
-                    "labelPosition": "alignLeft",
-                    "defaultValue": "",
-                    "helpText": "",
-                    "hidden": false,
-                    "readOnly": false,
-                    "summaryField": false,
-                    "displayName": true,
-                    "outerClass": null,
-                    "labelClass": null,
-                    "inputClass": null,
-                    "outputFormat": "normal",
-                    "currencyPrefix": null,
-                    "width": null,
-                    "inputMask": null,
-                    "inputMaskPlaceholder": null,
-                    "lengthCount": null,
-                    "hideWhenBlank": null,
-                    "displayCondition": "{contacted} icontains 'yes'",
-                    "mandatoryCondition": null,
-                    "readonlyCondition": null,
-                    "mandatory": true,
-                    "minimumLength": null,
-                    "maximumLength": null,
-                    "validationCondition": null,
-                    "validationMask": null,
-                    "mandatoryMessage": "This field is required",
-                    "minimumLengthMessage": "Please input at least _min_value_ characters",
-                    "maximumLengthMessage": "Please input no more than _max_value_ characters",
-                    "validationMaskMessage": "Please input text of the format: _validation_mask_",
-                    "validationConditionMessage": "This field is invalid"
-                  },
-                  "conditionInputs": [
-                    {
-                      "element": "select",
-                      "value": "contacted",
-                      "type": [
-                        "fields"
-                      ]
-                    },
-                    {
-                      "element": "select",
-                      "value": "icontains",
-                      "type": [
-                        "_select"
-                      ]
-                    },
-                    {
-                      "element": "select",
-                      "value": "yes",
-                      "type": [
-                        "list"
-                      ]
-                    }
-                  ],
-                  "id": "AF-Field-971911cf-63ac-4be2-995b-7af345b45847"
-                },
-                {
-                  "type": "text",
-                  "props": {
-                    "label": "Your email address",
-                    "dataName": "yourEmai",
-                    "labelPosition": "alignLeft",
-                    "defaultValue": "",
-                    "helpText": "",
-                    "hidden": false,
-                    "readOnly": false,
-                    "summaryField": false,
-                    "displayName": true,
-                    "outerClass": null,
-                    "labelClass": null,
-                    "inputClass": null,
-                    "outputFormat": "normal",
-                    "currencyPrefix": null,
-                    "width": null,
-                    "inputMask": null,
-                    "inputMaskPlaceholder": null,
-                    "lengthCount": null,
-                    "hideWhenBlank": null,
-                    "displayCondition": "{contacted} icontains 'yes'",
-                    "mandatoryCondition": null,
-                    "readonlyCondition": null,
-                    "mandatory": true,
-                    "minimumLength": "",
-                    "maximumLength": "",
-                    "validationCondition": "",
-                    "validationMask": "/^[-a-z0-9~!$%^&*#_=+}{\\'?]+(\\.[-a-z0-9~!$%^&*#_=+}{\\'?]+)*@[a-z0-9][-a-z0-9_]*(\\.[-a-z0-9_]+)(\\.[a-z0-9]+)*$/gim",
-                    "mandatoryMessage": "This field is required",
-                    "minimumLengthMessage": "Please input at least _min_value_ characters",
-                    "maximumLengthMessage": "Please input no more than _max_value_ characters",
-                    "validationMaskMessage": "Please input text of the format: _validation_mask_",
-                    "validationConditionMessage": "This field is invalid",
-                    "validationMaskMessageValue": "Email Address"
-                  },
-                  "conditionInputs": [
-                    {
-                      "element": "select",
-                      "value": "contacted",
-                      "type": [
-                        "fields"
-                      ]
-                    },
-                    {
-                      "element": "select",
-                      "value": "icontains",
-                      "type": [
-                        "_select"
-                      ]
-                    },
-                    {
-                      "element": "select",
-                      "value": "yes",
-                      "type": [
-                        "list"
-                      ]
-                    }
-                  ],
-                  "id": "AF-Field-7a6e1af4-d73c-4e03-b3f4-475fdcde7bef"
                 },
                 {
                   "type": "html",
